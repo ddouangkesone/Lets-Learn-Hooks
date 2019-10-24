@@ -1,11 +1,16 @@
-import React from 'react';
-import './App.css';
+import React, { useState } from "react";
+import "./App.css";
 
 function App() {
+  const [buttonText, setButtonText] = useState("Click me, please");
   return (
-    <div className="App">
-      hello world
-    </div>
+    <button
+      onClick={() => {
+        setButtonText("Thanks, been clicked!");
+      }}
+    >
+      {buttonText}
+    </button>
   );
 }
 
