@@ -6,7 +6,12 @@ function App() {
   return (
     <button
       onClick={() => {
-        setButtonText("Thanks, been clicked!");
+        if(buttonText === "Click me, please") {
+          setButtonText("Thanks, been clicked!");
+        } else {
+          setButtonText("Click me, please")
+        }
+        
       }}
     >
       {buttonText}
